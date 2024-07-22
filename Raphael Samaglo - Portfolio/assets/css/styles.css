@@ -2,7 +2,7 @@
 
 /* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
+  --font-family: "Roboto", sans-serif;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
@@ -67,6 +67,7 @@ nav a {
   color: var(--primary-color);
   transition: var(--transition);
 }
+
 nav a:hover {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
@@ -109,8 +110,10 @@ nav ul li {
 
 .bio {
   width: 25rem;
+  height: 22.5rem;
   padding: 0.625rem;
-  border-radius: 6px;
+  margin-top: 5rem;
+  border-radius: 20px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
 }
 
@@ -118,15 +121,23 @@ nav ul li {
   margin-bottom: var(--bottom-margin);
 }
 
+.bio-title{
+  text-align: center;
+  margin-top: 1rem;
+}
+
 .bio p {
   line-height: var(--line-height);
-  padding: 0.3rem 0;
+  padding: 0.3rem 0.5rem;
+  margin-top: 2rem;
+  text-align: justify;
 }
 
 /* More About Me*/
 .more-about {
   background-color: var(--bg-color);
   padding: 1rem 6rem;
+  margin-top: 4rem;
 }
 
 .more-about h2 {
@@ -149,6 +160,11 @@ nav ul li {
 
 .skill-header {
   margin-bottom: 1rem;
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .skills-wrapper img {
@@ -337,6 +353,26 @@ footer {
   .contact-form-container {
     max-width: 23.75rem;
   }
+  
+  .skills-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%    
+  }
+
+  .skills-wrapper .first-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .skills-wrapper img {
+    width: 80%;
+    height: 20vh;
+    max-width: 300px;
+  }
+  
 }
 
 @media screen and (max-width: 420px) {
@@ -344,6 +380,10 @@ footer {
     height: 26.5rem;
     width: 17rem;
     border-radius: 20px;
+  }
+  .skills-wrapper img {
+    width: 90%;
+    max-width: 250px;
   }
 
   .bio {
